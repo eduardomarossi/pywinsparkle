@@ -185,6 +185,22 @@ def win_sparkle_get_automatic_check_for_updates():
 
     return result
 
+def win_sparkle_set_hide_updater_windows(hide):
+    """ Sets whether updates are checked automatically or only through a manual call.
+    If disabled, win_sparkle_check_update_with_ui() must be used explicitly.
+
+    :param update_state: 1 to have updates checked automatically, 0 otherwise
+    """
+
+    dll.win_sparkle_set_hide_updater_windows.restype = None
+    dll.win_sparkle_set_hide_updater_windows.argtypes = [c_int64]
+    dll.win_sparkle_set_hide_updater_windows(hide)
+
+    #return result
+
+
+
+
 def win_sparkle_set_automatic_check_for_updates(update_state):
     """ Sets whether updates are checked automatically or only through a manual call.
     If disabled, win_sparkle_check_update_with_ui() must be used explicitly.

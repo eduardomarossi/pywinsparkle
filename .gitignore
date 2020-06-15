@@ -3,3 +3,4 @@ build/
 .idea/
 dist/
 pysparkle/__pycache__/
+.DS_Store
